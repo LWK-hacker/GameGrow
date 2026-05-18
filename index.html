@@ -1,285 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Bird Cash Fly – Play & Earn Real Rewards</title>
-  <meta name="description" content="Bird Cash Fly is the ultimate bird earning game. Fly your bird, earn coins, and get real cash rewards. Instant withdrawals via JazzCash, EasyPaisa & USDT."/>
-  <meta name="keywords" content="bird earning game, real rewards game, flappy bird rewards, online earning game, coin reward game, mobile bird game, bird cash fly"/>
-  <meta property="og:title" content="Bird Cash Fly – Play & Earn Real Rewards"/>
-  <meta property="og:description" content="Fly your bird, collect coins, and cash out real money. Join thousands of players earning daily."/>
-  <meta property="og:type" content="website"/>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐦</text></svg>"/>
-  <style>
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{
-      --neon:#00f5ff;--neon2:#b44fff;--neon3:#ffcc00;
-      --bg:#08080f;--bg2:#0d0d1a;
-      --glass:rgba(255,255,255,0.04);--gborder:rgba(0,245,255,0.14);
-      --text:#eef0f8;--muted:#7a8499;
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Download App</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,#0f172a,#111827,#1e293b);
+    overflow:hidden;
+}
+
+.bg{
+    position:absolute;
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.06);
+    filter:blur(10px);
+}
+
+.bg1{
+    top:-80px;
+    left:-80px;
+}
+
+.bg2{
+    bottom:-100px;
+    right:-80px;
+}
+
+.card{
+    position:relative;
+    width:90%;
+    max-width:380px;
+    padding:35px 28px;
+    border-radius:28px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,0.1);
+    text-align:center;
+    box-shadow:0 10px 40px rgba(0,0,0,0.4);
+    animation:fade 1s ease;
+}
+
+.logo{
+    width:90px;
+    height:90px;
+    margin:auto;
+    border-radius:24px;
+    background:linear-gradient(135deg,#3b82f6,#8b5cf6);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:34px;
+    color:white;
+    font-weight:700;
+    margin-bottom:20px;
+    box-shadow:0 8px 25px rgba(59,130,246,0.4);
+}
+
+h1{
+    color:white;
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+p{
+    color:#cbd5e1;
+    font-size:14px;
+    line-height:1.6;
+    margin-bottom:28px;
+}
+
+.download-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    width:100%;
+    padding:16px;
+    border-radius:16px;
+    text-decoration:none;
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    color:white;
+    font-size:17px;
+    font-weight:600;
+    transition:0.3s;
+    box-shadow:0 10px 25px rgba(37,99,235,0.35);
+}
+
+.download-btn:hover{
+    transform:translateY(-3px) scale(1.02);
+    box-shadow:0 15px 35px rgba(37,99,235,0.5);
+}
+
+.download-btn:active{
+    transform:scale(0.98);
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(30px);
     }
-    html{scroll-behavior:smooth}
-    body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;opacity:0;animation:fadeIn .5s ease .05s forwards}
-    @keyframes fadeIn{to{opacity:1}}
-    /* NAV */
-    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 22px;background:rgba(8,8,15,.88);backdrop-filter:blur(18px);border-bottom:1px solid var(--gborder)}
-    .logo{font-size:1.25rem;font-weight:900;color:var(--neon);text-shadow:0 0 14px var(--neon);text-decoration:none;letter-spacing:.5px}
-    .nav-links{display:flex;gap:6px;align-items:center}
-    .nav-links a{color:var(--text);text-decoration:none;padding:8px 15px;border-radius:9px;font-size:.88rem;transition:all .2s}
-    .nav-links a:hover{background:var(--glass);color:var(--neon)}
-    .nav-btn{background:linear-gradient(135deg,var(--neon),var(--neon2))!important;color:#08080f!important;font-weight:800!important;border-radius:10px!important;box-shadow:0 0 16px rgba(0,245,255,.35)}
-    .nav-btn:hover{transform:scale(1.04);box-shadow:0 0 26px rgba(0,245,255,.6)!important}
-    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
-    .hamburger span{display:block;width:24px;height:2px;background:var(--neon);border-radius:2px;transition:all .3s}
-    .mob-menu{display:none;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:rgba(8,8,15,.97);border-bottom:1px solid var(--gborder);padding:12px 16px;gap:4px}
-    .mob-menu.open{display:flex}
-    .mob-menu a{color:var(--text);text-decoration:none;padding:12px 16px;border-radius:10px;font-size:.95rem;transition:all .2s;border:1px solid transparent}
-    .mob-menu a:hover{border-color:var(--gborder);background:var(--glass);color:var(--neon)}
-    /* HERO */
-    .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:110px 20px 60px;
-      background:radial-gradient(ellipse 80% 55% at 50% 0%,rgba(0,245,255,.07) 0%,transparent 70%),
-                 radial-gradient(ellipse 60% 45% at 85% 100%,rgba(180,79,255,.07) 0%,transparent 60%),var(--bg);
-      position:relative;overflow:hidden}
-    .hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='25' cy='25' r='.8' fill='%2300f5ff' fill-opacity='.04'/%3E%3C/svg%3E");pointer-events:none}
-    .hero-badge{display:inline-block;background:rgba(0,245,255,.1);border:1px solid rgba(0,245,255,.28);color:var(--neon);border-radius:50px;padding:6px 18px;font-size:.75rem;font-weight:700;letter-spacing:1.2px;margin-bottom:20px;text-transform:uppercase;animation:fadeDown .6s ease}
-    .bird-anim{font-size:5.5rem;margin-bottom:14px;animation:birdFloat 2.4s ease-in-out infinite;filter:drop-shadow(0 0 22px rgba(0,245,255,.65))}
-    @keyframes birdFloat{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-20px) rotate(5deg)}}
-    @keyframes fadeDown{from{opacity:0;transform:translateY(-18px)}to{opacity:1;transform:translateY(0)}}
-    h1{font-size:clamp(2.4rem,7vw,4.8rem);font-weight:900;line-height:1.08;background:linear-gradient(135deg,var(--neon),#fff 50%,var(--neon2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:18px;animation:fadeDown .7s ease}
-    .hero-sub{font-size:clamp(1rem,2.5vw,1.18rem);color:var(--muted);max-width:520px;line-height:1.75;margin-bottom:38px;animation:fadeDown .8s ease}
-    .hero-btns{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;animation:fadeDown .9s ease;margin-bottom:50px}
-    .btn-primary{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(135deg,var(--neon),var(--neon2));color:#08080f;font-weight:900;font-size:1.05rem;padding:15px 34px;border-radius:15px;text-decoration:none;box-shadow:0 0 26px rgba(0,245,255,.45),0 4px 24px rgba(0,0,0,.4);transition:all .25s;border:none;cursor:pointer}
-    .btn-primary:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 0 40px rgba(0,245,255,.65),0 8px 32px rgba(0,0,0,.4)}
-    .btn-outline{display:inline-flex;align-items:center;gap:9px;border:1.5px solid var(--gborder);color:var(--text);font-weight:600;font-size:1rem;padding:15px 30px;border-radius:15px;text-decoration:none;background:var(--glass);backdrop-filter:blur(8px);transition:all .25s;cursor:pointer}
-    .btn-outline:hover{border-color:var(--neon);color:var(--neon);transform:translateY(-2px)}
-    /* STATS */
-    .stats-row{display:flex;justify-content:center;flex-wrap:wrap;gap:0;max-width:660px;width:100%}
-    .stat-it{flex:1;min-width:120px;display:flex;flex-direction:column;align-items:center;padding:20px 14px;border:1px solid var(--gborder);background:var(--glass);backdrop-filter:blur(10px)}
-    .stat-it:first-child{border-radius:14px 0 0 14px}
-    .stat-it:last-child{border-radius:0 14px 14px 0}
-    .sn{font-size:1.6rem;font-weight:900;color:var(--neon);text-shadow:0 0 12px var(--neon)}
-    .sl{font-size:.72rem;color:var(--muted);margin-top:4px;text-transform:uppercase;letter-spacing:.6px}
-    /* SECTIONS */
-    .section{padding:72px 20px;max-width:1080px;margin:0 auto}
-    .s-title{text-align:center;font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;margin-bottom:10px;background:linear-gradient(135deg,#fff,var(--neon));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-    .s-sub{text-align:center;color:var(--muted);margin-bottom:48px;font-size:.95rem}
-    /* FEATURES */
-    .feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
-    .feat-card{background:var(--glass);border:1px solid var(--gborder);border-radius:20px;padding:28px 22px;backdrop-filter:blur(12px);transition:all .3s;position:relative;overflow:hidden}
-    .feat-card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--neon),transparent);opacity:0;transition:opacity .3s}
-    .feat-card:hover{transform:translateY(-6px);border-color:rgba(0,245,255,.32)}
-    .feat-card:hover::after{opacity:1}
-    .fi{font-size:2.2rem;margin-bottom:14px}
-    .ft{font-size:1.05rem;font-weight:700;margin-bottom:8px}
-    .fd{color:var(--muted);font-size:.88rem;line-height:1.65}
-    /* STEPS */
-    .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:22px}
-    .step-c{background:var(--glass);border:1px solid var(--gborder);border-radius:20px;padding:30px 18px;text-align:center;backdrop-filter:blur(10px);transition:all .3s}
-    .step-c:hover{transform:translateY(-4px);border-color:rgba(180,79,255,.38)}
-    .s-num{width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,var(--neon),var(--neon2));display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:900;color:#08080f;margin:0 auto 16px;box-shadow:0 0 18px rgba(0,245,255,.45)}
-    /* REWARDS */
-    .rew-box{background:linear-gradient(135deg,rgba(0,245,255,.05),rgba(180,79,255,.05));border:1px solid var(--gborder);border-radius:28px;padding:55px 36px;text-align:center}
-    .rew-cards{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-top:34px}
-    .rew-card{background:rgba(0,0,0,.3);border-radius:20px;padding:26px 22px;min-width:190px;border:1px solid var(--gborder);transition:all .3s}
-    .rew-card.gold{border-color:rgba(255,204,0,.38)}
-    .rew-card.diam{border-color:rgba(180,79,255,.38)}
-    .rew-card:hover{transform:scale(1.04)}
-    /* LEADERBOARD */
-    .lb{max-width:580px;margin:0 auto}
-    .lb-row{background:var(--glass);border:1px solid var(--gborder);border-radius:14px;padding:15px 18px;margin-bottom:9px;display:flex;align-items:center;gap:15px;backdrop-filter:blur(10px);transition:all .25s;cursor:pointer}
-    .lb-row:hover{border-color:rgba(0,245,255,.28);transform:translateX(4px)}
-    /* FOOTER */
-    footer{border-top:1px solid var(--gborder);padding:48px 20px 28px;background:rgba(0,0,0,.28)}
-    .foot-in{max-width:1080px;margin:0 auto}
-    .foot-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:36px;margin-bottom:36px}
-    .foot-logo{font-size:1.3rem;font-weight:900;color:var(--neon);text-shadow:0 0 12px var(--neon);margin-bottom:10px}
-    .foot-desc{color:var(--muted);font-size:.84rem;line-height:1.7;max-width:270px}
-    .foot-col h4{font-weight:700;margin-bottom:14px;font-size:.84rem;text-transform:uppercase;letter-spacing:.5px;color:var(--neon)}
-    .foot-col a{display:block;color:var(--muted);text-decoration:none;font-size:.84rem;margin-bottom:9px;transition:color .2s}
-    .foot-col a:hover{color:var(--text)}
-    .foot-bot{border-top:1px solid var(--gborder);padding-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
-    .foot-bot p{color:var(--muted);font-size:.78rem}
-    /* WA FLOAT */
-    .wa-btn{position:fixed;bottom:26px;right:22px;z-index:500;background:#25d366;border-radius:50%;width:58px;height:58px;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:1.6rem;box-shadow:0 4px 20px rgba(37,211,102,.5);animation:wap 2.4s infinite;transition:transform .25s}
-    .wa-btn:hover{transform:scale(1.13);animation:none}
-    @keyframes wap{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.5)}50%{box-shadow:0 4px 32px rgba(37,211,102,.75),0 0 0 8px rgba(37,211,102,.12)}}
-    /* AUTH POPUP */
-    .auth-overlay{position:fixed;inset:0;z-index:2000;background:rgba(0,0,0,.8);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .3s}
-    .auth-overlay.show{opacity:1;pointer-events:all}
-    .auth-card{background:rgba(13,13,26,.97);border:1px solid rgba(0,245,255,.25);border-radius:26px;padding:42px 32px;max-width:360px;width:100%;text-align:center;transform:scale(.85);transition:transform .35s cubic-bezier(.175,.885,.32,1.275)}
-    .auth-overlay.show .auth-card{transform:scale(1)}
-    .auth-icon{font-size:3.4rem;margin-bottom:14px}
-    .auth-title{font-size:1.3rem;font-weight:900;color:#fff;margin-bottom:8px}
-    .auth-msg{color:var(--muted);font-size:.88rem;line-height:1.55;margin-bottom:26px}
-    .auth-btns{display:flex;gap:10px}
-    .btn-auth-login{flex:1;padding:13px;background:linear-gradient(135deg,var(--neon),var(--neon2));color:#08080f;font-weight:800;border:none;border-radius:12px;cursor:pointer;font-size:.92rem;transition:all .2s}
-    .btn-auth-login:hover{transform:scale(1.03)}
-    .btn-auth-cancel{flex:1;padding:13px;background:var(--glass);border:1.5px solid var(--gborder);color:var(--text);font-weight:600;border-radius:12px;cursor:pointer;font-size:.9rem;transition:all .2s}
-    .btn-auth-cancel:hover{border-color:var(--neon);color:var(--neon)}
-    @media(max-width:768px){.nav-links{display:none}.hamburger{display:flex}.foot-top{grid-template-columns:1fr;gap:24px}.foot-bot{flex-direction:column;text-align:center}}
-    @media(max-width:480px){.rew-box{padding:36px 16px}}
-  </style>
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.footer{
+    margin-top:18px;
+    color:#94a3b8;
+    font-size:12px;
+}
+</style>
 </head>
 <body>
 
-<nav>
-  <a href="index.html" class="logo">🐦 Bird Cash Fly</a>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="#how">How it Works</a>
-    <a href="#rewards">Rewards</a>
-    <a id="navPlay" href="#" onclick="guardNav(event,'game.html')">🎮 Play</a>
-    <a id="navLogin" href="login.html" class="nav-btn">Login</a>
-  </div>
-  <div class="hamburger" onclick="toggleMob()"><span></span><span></span><span></span></div>
-</nav>
-<div class="mob-menu" id="mobMenu">
-  <a href="index.html">🏠 Home</a>
-  <a href="#" onclick="guardNav(event,'game.html');toggleMob()">🎮 Play Game</a>
-  <a href="#" onclick="guardNav(event,'wallet.html');toggleMob()">💰 Wallet</a>
-  <a href="#" onclick="guardNav(event,'profile.html');toggleMob()">👤 Profile</a>
-  <a href="login.html">🔐 Login</a>
-  <a href="signup.html">✨ Sign Up Free</a>
+<div class="bg bg1"></div>
+<div class="bg bg2"></div>
+
+<div class="card">
+
+    <div class="logo">⬇</div>
+
+    <h1>Download Now</h1>
+
+    <p>
+        Download and signup if you want to grow.
+        Download kro yahan sa aur grow kro.
+    </p>
+
+    <!-- CHANGE LINK HERE -->
+    <a href="https://jeetogame.com/?code=18703151" class="download-btn">
+        Download
+    </a>
+
+    <div class="footer">
+        © 2026 Your Brand
+    </div>
+
 </div>
 
-<!-- HERO -->
-<section class="hero">
-  <span class="hero-badge">🏆 #1 Bird Earning Game</span>
-  <div class="bird-anim">🐦</div>
-  <h1>Play & Earn<br>Real Rewards</h1>
-  <p class="hero-sub">Fly your bird through glowing obstacles, earn coins with every point, and withdraw real cash via JazzCash, EasyPaisa, or USDT — instantly.</p>
-  <div class="hero-btns">
-    <a href="#" class="btn-primary" onclick="guardNav(event,'game.html')">🎮 Play Now – Free</a>
-    <a href="signup.html" class="btn-outline">✨ Create Account</a>
-  </div>
-  <div class="stats-row">
-    <div class="stat-it"><span class="sn">50K+</span><span class="sl">Players</span></div>
-    <div class="stat-it"><span class="sn">₨2M+</span><span class="sl">Paid Out</span></div>
-    <div class="stat-it"><span class="sn">4.9★</span><span class="sl">Rating</span></div>
-    <div class="stat-it"><span class="sn">24/7</span><span class="sl">Support</span></div>
-  </div>
-</section>
-
-<div style="max-width:1080px;margin:0 auto;padding:0 20px">
-  <!-- FEATURES -->
-  <section class="section" style="padding-top:36px">
-    <h2 class="s-title">Why Bird Cash Fly?</h2>
-    <p class="s-sub">Everything you need to play, earn, and cash out.</p>
-    <div class="feat-grid">
-      <div class="feat-card"><div class="fi">🎯</div><div class="ft">Instant Withdrawals</div><div class="fd">Cash out via JazzCash, EasyPaisa or USDT. No delays, no complications.</div></div>
-      <div class="feat-card"><div class="fi">🪙</div><div class="ft">Coin Rewards</div><div class="fd">Earn 2 coins per score point. 10 coins = 1 PKR. Simple and transparent.</div></div>
-      <div class="feat-card"><div class="fi">📈</div><div class="ft">Score Milestones</div><div class="fd">Hit score 50 for a Bronze reward, score 500 for the Diamond mega reward.</div></div>
-      <div class="feat-card"><div class="fi">🏆</div><div class="ft">Leaderboards</div><div class="fd">Compete with players worldwide. Top players unlock exclusive bonus rewards.</div></div>
-      <div class="feat-card"><div class="fi">📱</div><div class="ft">Mobile First</div><div class="fd">Perfectly optimized for Android. Play anywhere with smooth touch controls.</div></div>
-      <div class="feat-card"><div class="fi">🔒</div><div class="ft">Secure & Trusted</div><div class="fd">Your earnings are protected. Thousands of players have already cashed out.</div></div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section class="section" id="how">
-    <h2 class="s-title">How It Works</h2>
-    <p class="s-sub">Start earning in 3 simple steps.</p>
-    <div class="steps">
-      <div class="step-c"><div class="s-num">1</div><div style="font-weight:700;margin-bottom:8px">Create Account</div><div style="color:var(--muted);font-size:.86rem;line-height:1.6">Sign up free in 30 seconds. No credit card required.</div></div>
-      <div class="step-c"><div class="s-num">2</div><div style="font-weight:700;margin-bottom:8px">Play & Earn Coins</div><div style="color:var(--muted);font-size:.86rem;line-height:1.6">Fly through obstacles, hit score milestones, and stack up coins.</div></div>
-      <div class="step-c"><div class="s-num">3</div><div style="font-weight:700;margin-bottom:8px">Withdraw Cash</div><div style="color:var(--muted);font-size:.86rem;line-height:1.6">Convert coins to PKR or USD and request instant withdrawal.</div></div>
-    </div>
-  </section>
-
-  <!-- REWARDS -->
-  <section class="section" id="rewards">
-    <div class="rew-box">
-      <h2 class="s-title" style="-webkit-text-fill-color:#fff;color:#fff">🎁 Score Milestone Rewards</h2>
-      <p style="color:var(--muted);margin-top:8px">Hit score milestones in-game to unlock massive coin bonuses.</p>
-      <div class="rew-cards">
-        <div class="rew-card gold">
-          <div style="font-size:2.8rem;margin-bottom:10px">🎁</div>
-          <div style="font-weight:800;margin-bottom:6px">Bronze Reward</div>
-          <div style="font-size:1.4rem;font-weight:900;color:var(--neon3)">+100 Coins</div>
-          <div style="color:var(--muted);font-size:.78rem;margin-top:5px">Reach Score 50</div>
-        </div>
-        <div class="rew-card diam">
-          <div style="font-size:2.8rem;margin-bottom:10px">💎</div>
-          <div style="font-weight:800;margin-bottom:6px">Diamond Reward</div>
-          <div style="font-size:1.4rem;font-weight:900;color:var(--neon2)">+2000 Coins</div>
-          <div style="color:var(--muted);font-size:.78rem;margin-top:5px">Reach Score 500</div>
-        </div>
-        <div class="rew-card" style="border-color:rgba(0,245,255,.32)">
-          <div style="font-size:2.8rem;margin-bottom:10px">⭐</div>
-          <div style="font-weight:800;margin-bottom:6px">Gameplay Coins</div>
-          <div style="font-size:1.4rem;font-weight:900;color:var(--neon)">+2 per Point</div>
-          <div style="color:var(--muted);font-size:.78rem;margin-top:5px">Every score point</div>
-        </div>
-      </div>
-      <div style="margin-top:32px">
-        <a href="#" class="btn-primary" onclick="guardNav(event,'game.html')">🎮 Start Earning Now</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- LEADERBOARD -->
-  <section class="section">
-    <h2 class="s-title">Daily Top Players</h2>
-    <p class="s-sub">Can you reach the top? Updated every 24 hours.</p>
-    <div class="lb">
-      <div class="lb-row"><div style="font-size:1.3rem;font-weight:900;color:var(--neon3);min-width:28px;text-align:center">🥇</div><div style="font-size:1.7rem">🦅</div><div style="flex:1"><div style="font-weight:700;font-size:.9rem">AliKhan99</div><div style="color:var(--muted);font-size:.75rem">Score: 1,240</div></div><div style="color:var(--neon3);font-weight:800">💰 24,800</div></div>
-      <div class="lb-row"><div style="font-size:1.3rem;font-weight:900;color:#c0c0c0;min-width:28px;text-align:center">🥈</div><div style="font-size:1.7rem">🦜</div><div style="flex:1"><div style="font-weight:700;font-size:.9rem">ZaraPlays</div><div style="color:var(--muted);font-size:.75rem">Score: 980</div></div><div style="color:var(--neon3);font-weight:800">💰 19,600</div></div>
-      <div class="lb-row"><div style="font-size:1.3rem;font-weight:900;color:#cd7f32;min-width:28px;text-align:center">🥉</div><div style="font-size:1.7rem">🐧</div><div style="flex:1"><div style="font-weight:700;font-size:.9rem">FastBird_786</div><div style="color:var(--muted);font-size:.75rem">Score: 876</div></div><div style="color:var(--neon3);font-weight:800">💰 17,520</div></div>
-      <div class="lb-row"><div style="color:var(--muted);font-size:1.1rem;font-weight:700;min-width:28px;text-align:center">4</div><div style="font-size:1.7rem">🦉</div><div style="flex:1"><div style="font-weight:700;font-size:.9rem">PakGamer01</div><div style="color:var(--muted);font-size:.75rem">Score: 742</div></div><div style="color:var(--neon3);font-weight:800">💰 14,840</div></div>
-      <div class="lb-row"><div style="color:var(--muted);font-size:1.1rem;font-weight:700;min-width:28px;text-align:center">5</div><div style="font-size:1.7rem">🦚</div><div style="flex:1"><div style="font-weight:700;font-size:.9rem">NeonFlyer_X</div><div style="color:var(--muted);font-size:.75rem">Score: 699</div></div><div style="color:var(--neon3);font-weight:800">💰 13,980</div></div>
-    </div>
-  </section>
-</div>
-
-<!-- FOOTER -->
-<footer>
-  <div class="foot-in">
-    <div class="foot-top">
-      <div><div class="foot-logo">🐦 Bird Cash Fly</div><p class="foot-desc">The #1 bird earning game in Pakistan. Play, earn coins, and withdraw real cash instantly via JazzCash, EasyPaisa or USDT.</p></div>
-      <div class="foot-col"><h4>Navigate</h4><a href="index.html">Home</a><a href="#" onclick="guardNav(event,'game.html')">Play Game</a><a href="#" onclick="guardNav(event,'wallet.html')">Wallet</a><a href="#" onclick="guardNav(event,'profile.html')">Profile</a></div>
-      <div class="foot-col"><h4>Account</h4><a href="signup.html">Sign Up</a><a href="login.html">Login</a><a href="https://wa.me/923367027845" target="_blank">Support</a></div>
-    </div>
-    <div class="foot-bot">
-      <p>© 2024 Bird Cash Fly. All rights reserved.</p>
-      <p>10 Coins = 1 PKR · Instant Withdrawals</p>
-    </div>
-  </div>
-</footer>
-
-<!-- AUTH POPUP -->
-<div class="auth-overlay" id="authOverlay">
-  <div class="auth-card">
-    <div class="auth-icon">🔐</div>
-    <div class="auth-title">Login Required</div>
-    <div class="auth-msg">Please Login or Signup First to access this feature and start earning real rewards!</div>
-    <div class="auth-btns">
-      <button class="btn-auth-login" onclick="goLogin()">🚀 Login Now</button>
-      <button class="btn-auth-cancel" onclick="closeAuth()">Cancel</button>
-    </div>
-    <div style="margin-top:14px"><a href="signup.html" style="color:var(--neon);font-size:.82rem;text-decoration:none">New here? Sign Up Free →</a></div>
-  </div>
-</div>
-
-<a href="https://wa.me/923367027845" target="_blank" class="wa-btn">💬</a>
-
-<script>
-  let authTarget='';
-  function isLoggedIn(){return !!localStorage.getItem('bcf_user')}
-  function guardNav(e,url){
-    e.preventDefault();
-    if(isLoggedIn()){window.location.href=url;return}
-    authTarget=url;
-    document.getElementById('authOverlay').classList.add('show');
-  }
-  function goLogin(){window.location.href='login.html'}
-  function closeAuth(){document.getElementById('authOverlay').classList.remove('show')}
-  function toggleMob(){document.getElementById('mobMenu').classList.toggle('open')}
-  document.addEventListener('DOMContentLoaded',()=>{
-    if(isLoggedIn()){
-      const el=document.getElementById('navLogin');
-      if(el){el.textContent='My Account';el.href='profile.html'}
-    }
-  });
-</script>
 </body>
 </html>
